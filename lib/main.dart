@@ -254,6 +254,7 @@ class _inputPageState extends State<inputPage> {
             GestureDetector(
               onTap: () {
                 final height2 = height / 100;
+
                 final res = weight / (height2 * height2);
 
                 Navigator.push(
