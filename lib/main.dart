@@ -28,6 +28,7 @@ class InputPage extends StatefulWidget {
 
 class _InputPageState extends State<InputPage> {
   Gender gender;
+
   var age = 1;
   var height = 130;
   var weight = 1;
