@@ -47,7 +47,7 @@ class ResultPage extends StatelessWidget {
                   Navigator.pop(context);
                 },
                 child: Container(
-                  height: 80,
+                  height: 70,
                   color: kBottomContainerColour,
                   child: Center(
                       child: Text(

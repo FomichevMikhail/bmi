@@ -12,21 +12,21 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.dark(),
-      home: inputPage(),
+      home: InputPage(),
     );
   }
 }
 
 enum Gender { male, female }
 
-class inputPage extends StatefulWidget {
-  inputPage({Key key}) : super(key: key);
+class InputPage extends StatefulWidget {
+  InputPage({Key key}) : super(key: key);
 
   @override
-  _inputPageState createState() => _inputPageState();
+  _InputPageState createState() => _InputPageState();
 }
 
-class _inputPageState extends State<inputPage> {
+class _InputPageState extends State<InputPage> {
   Gender gender;
   var age = 1;
   var height = 130;
