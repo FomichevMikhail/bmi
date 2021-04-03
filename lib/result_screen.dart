@@ -5,6 +5,7 @@ class ResultPage extends StatelessWidget {
   ResultPage({this.bmi});
 
   final String bmi;
+  const blabla = 0;
 
   @override
   Widget build(BuildContext context) {

@@ -285,6 +285,7 @@ class ReusableCard extends StatelessWidget {
   final Color color;
   final Widget child;
   final Function onTap;
+  const fignya = 0;
 
   const ReusableCard({
     Key key,
