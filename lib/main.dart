@@ -271,7 +271,7 @@ class _InputPageState extends State<InputPage> {
                 color: kBottomContainerColour,
                 child: Center(
                     child: Text(
-                  'CALCULATE MY INDEX',
+                  'CALCULATE MY BMI INDEX',
                   style: kLabelTextStyle,
                 )),
               ),
