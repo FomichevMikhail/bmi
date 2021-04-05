@@ -28,9 +28,9 @@ class InputPage extends StatefulWidget {
 
 class _InputPageState extends State<InputPage> {
   Gender gender;
-  var age = 1;
-  var height = 130;
-  var weight = 1;
+  var age = 18;
+  var height = 160;
+  var weight = 60;
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +56,7 @@ class _InputPageState extends State<InputPage> {
                       });
                     },
                     color: gender == Gender.male
-                        ? kActiveCardColour
+                        ? kBottomContainerColour
                         : kInactiveCardColour,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -83,7 +83,7 @@ class _InputPageState extends State<InputPage> {
                       });
                     },
                     color: gender == Gender.female
-                        ? kActiveCardColour
+                        ? kBottomContainerColour
                         : kInactiveCardColour,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
