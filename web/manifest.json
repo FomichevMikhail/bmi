@@ -1,11 +1,11 @@
 {
-    "name": "mini_app",
-    "short_name": "mini_app",
+    "name": "BMI",
+    "short_name": "BMI",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Calculate BMI",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
