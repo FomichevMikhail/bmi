@@ -39,7 +39,7 @@ class _InputPageState extends State<InputPage> {
         appBar: AppBar(
           backgroundColor: kBG,
           title: Text(
-            'РАСЧЕТ BMI',
+            'РАСЧЕТ BMI (индекс массы тела)',
             style: kBodyTextStyle,
           ),
         ),
@@ -270,7 +270,7 @@ class _InputPageState extends State<InputPage> {
                 color: kBottomContainerColour,
                 child: Center(
                     child: Text(
-                  'CALCULATE MY BMI INDEX',
+                  'РАССЧИТАТЬ МОЙ BMI',
                   style: kLabelTextStyle,
                 )),
               ),
