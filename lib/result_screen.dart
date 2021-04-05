@@ -13,7 +13,7 @@ class ResultPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: kBG,
         title: Text(
-          'CALC RESULTS',
+          'РЕЗУЛЬТАТЫ РАСЧЕТА',
           style: kBodyTextStyle,
         ),
       ),
@@ -28,7 +28,7 @@ class ResultPage extends StatelessWidget {
                   height: 150,
                 ),
                 Text(
-                  'YOUR BMI IS',
+                  'ВАШ BMI',
                   style: kResultTextStyle,
                 ),
                 SizedBox(
@@ -51,7 +51,7 @@ class ResultPage extends StatelessWidget {
                   color: kBottomContainerColour,
                   child: Center(
                       child: Text(
-                    'RECALCULATE',
+                    'ПЕРЕСЧИТАТЬ',
                     style: kLabelTextStyle,
                   )),
                 ),

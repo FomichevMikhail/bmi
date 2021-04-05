@@ -39,7 +39,7 @@ class _InputPageState extends State<InputPage> {
         appBar: AppBar(
           backgroundColor: kBG,
           title: Text(
-            'QWERTY',
+            'РАСЧЕТ BMI',
             style: kBodyTextStyle,
           ),
         ),
@@ -69,7 +69,7 @@ class _InputPageState extends State<InputPage> {
                           height: 10,
                         ),
                         Text(
-                          'MALE',
+                          'МУЖЧИНА',
                           style: kBodyTextStyle,
                         ),
                       ],
@@ -96,7 +96,7 @@ class _InputPageState extends State<InputPage> {
                           height: 10,
                         ),
                         Text(
-                          'FEMALE',
+                          'ЖЕНЩИНА',
                           style: kBodyTextStyle,
                         ),
                       ],
@@ -112,7 +112,7 @@ class _InputPageState extends State<InputPage> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    'HEIGHT',
+                    'РОСТ, см',
                     style: kBodyTextStyle,
                     textAlign: TextAlign.center,
                   ),
@@ -143,7 +143,7 @@ class _InputPageState extends State<InputPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Text(
-                          'WEIGHT',
+                          'ВЕС, кг',
                           style: kBodyTextStyle,
                         ),
                         Text(
@@ -197,7 +197,7 @@ class _InputPageState extends State<InputPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Text(
-                          'AGE',
+                          'ВОЗРАСТ',
                           style: kBodyTextStyle,
                         ),
                         Text(
