@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'constants.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'result_screen.dart';
+import 'theme.dart';
 
 void main() {
   runApp(MyApp());
@@ -64,13 +65,16 @@ class _InputPageState extends State<InputPage> {
                         Icon(
                           FontAwesomeIcons.mars,
                           size: 70,
+                          color: gender == Gender.male ? kTextBlue : kTextLight,
                         ),
                         SizedBox(
                           height: 10,
                         ),
                         Text(
                           'МУЖЧИНА',
-                          style: kBodyTextStyle,
+                          style: gender == Gender.male
+                              ? kBodyTextStyleDark
+                              : kBodyTextStyle,
                         ),
                       ],
                     ),
@@ -91,13 +95,17 @@ class _InputPageState extends State<InputPage> {
                         Icon(
                           FontAwesomeIcons.venus,
                           size: 70,
+                          color:
+                              gender == Gender.female ? kTextBlue : kTextLight,
                         ),
                         SizedBox(
                           height: 10,
                         ),
                         Text(
                           'ЖЕНЩИНА',
-                          style: kBodyTextStyle,
+                          style: gender == Gender.female
+                              ? kBodyTextStyleDark
+                              : kBodyTextStyle,
                         ),
                       ],
                     ),
@@ -125,6 +133,7 @@ class _InputPageState extends State<InputPage> {
                       min: 130,
                       max: 220,
                       activeColor: kBottomContainerColour,
+                      inactiveColor: kBG,
                       value: height.toDouble(),
                       onChanged: (value) {
                         setState(() {
@@ -153,20 +162,19 @@ class _InputPageState extends State<InputPage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            RawMaterialButton(
+                            TextButton(
                               onPressed: () {
                                 setState(() {
                                   weight++;
                                 });
                               },
                               child: Icon(FontAwesomeIcons.plus),
-                              shape: CircleBorder(),
-                              constraints: BoxConstraints.tightFor(
-                                width: 50,
-                                height: 50,
+                              style: TextButton.styleFrom(
+                                primary: Color(0xFFffffff),
+                                backgroundColor: kButtonColour1,
+                                shape: CircleBorder(),
+                                padding: EdgeInsets.all(13),
                               ),
-                              fillColor: Color(0xFF222747),
-                              padding: EdgeInsets.all(5),
                             ),
                             SizedBox(
                               width: 10,
@@ -183,7 +191,7 @@ class _InputPageState extends State<InputPage> {
                                 width: 50,
                                 height: 50,
                               ),
-                              fillColor: Color(0xFF222747),
+                              fillColor: kButtonColour1,
                               padding: EdgeInsets.all(5),
                             ),
                           ],
@@ -219,7 +227,7 @@ class _InputPageState extends State<InputPage> {
                                 width: 50,
                                 height: 50,
                               ),
-                              fillColor: Color(0xFF222747),
+                              fillColor: kButtonColour2,
                               padding: EdgeInsets.all(5),
                             ),
                             SizedBox(
@@ -237,7 +245,7 @@ class _InputPageState extends State<InputPage> {
                                 width: 50,
                                 height: 50,
                               ),
-                              fillColor: Color(0xFF222747),
+                              fillColor: kButtonColour2,
                               padding: EdgeInsets.all(5),
                             ),
                           ],
@@ -271,7 +279,7 @@ class _InputPageState extends State<InputPage> {
                 child: Center(
                     child: Text(
                   'РАССЧИТАТЬ МОЙ BMI',
-                  style: kLabelTextStyle,
+                  style: kLabelTextStyleDark,
                 )),
               ),
             ),
