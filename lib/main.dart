@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'constants.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'result_screen.dart';
-import 'theme.dart';
 
 void main() {
   runApp(MyApp());
@@ -39,9 +38,10 @@ class _InputPageState extends State<InputPage> {
         backgroundColor: kBG,
         appBar: AppBar(
           backgroundColor: kBG,
+          centerTitle: true,
           title: Text(
-            'РАСЧЕТ BMI (индекс массы тела)',
-            style: kBodyTextStyle,
+            'BMI (индекс массы тела)',
+            style: kBodyTextStyleBlue,
           ),
         ),
         body: Column(
@@ -56,25 +56,28 @@ class _InputPageState extends State<InputPage> {
                         gender = Gender.male;
                       });
                     },
-                    color: gender == Gender.male
-                        ? kBottomContainerColour
-                        : kInactiveCardColour,
+                    // color: gender == Gender.male
+                    //     ? kBottomContainerColour
+                    //     : kInactiveCardColour,
+                    border: gender == Gender.male ? true : false,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Icon(
                           FontAwesomeIcons.mars,
                           size: 70,
-                          color: gender == Gender.male ? kTextBlue : kTextLight,
+                          // color: gender == Gender.male ? kTextDark : kPictoRed,
+                          color: kPictoRed,
                         ),
                         SizedBox(
                           height: 10,
                         ),
                         Text(
                           'МУЖЧИНА',
-                          style: gender == Gender.male
-                              ? kBodyTextStyleDark
-                              : kBodyTextStyle,
+                          // style: gender == Gender.male
+                          //     ? kBodyTextStyleDark
+                          //     : kBodyTextStyleBlue,
+                          style: kBodyTextStyleBlue,
                         ),
                       ],
                     ),
@@ -86,9 +89,10 @@ class _InputPageState extends State<InputPage> {
                         gender = Gender.female;
                       });
                     },
-                    color: gender == Gender.female
-                        ? kBottomContainerColour
-                        : kInactiveCardColour,
+                    // color: gender == Gender.female
+                    //     ? kBottomContainerColour
+                    //     : kInactiveCardColour,
+                    border: gender == Gender.female ? true : false,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
@@ -96,16 +100,18 @@ class _InputPageState extends State<InputPage> {
                           FontAwesomeIcons.venus,
                           size: 70,
                           color:
-                              gender == Gender.female ? kTextBlue : kTextLight,
+                              // gender == Gender.female ? kTextDark : kPictoRed,
+                              kPictoRed,
                         ),
                         SizedBox(
                           height: 10,
                         ),
                         Text(
                           'ЖЕНЩИНА',
-                          style: gender == Gender.female
-                              ? kBodyTextStyleDark
-                              : kBodyTextStyle,
+                          // style: gender == Gender.female
+                          //     ? kBodyTextStyleDark
+                          //     : kBodyTextStyleBlue,
+                          style: kBodyTextStyleBlue,
                         ),
                       ],
                     ),
@@ -121,12 +127,12 @@ class _InputPageState extends State<InputPage> {
                 children: <Widget>[
                   Text(
                     'РОСТ, см',
-                    style: kBodyTextStyle,
+                    style: kBodyTextStyleGrey,
                     textAlign: TextAlign.center,
                   ),
                   Text(
                     height.toString(),
-                    style: kNumberTextStyle,
+                    style: kNumberTextStyleBlue,
                     textAlign: TextAlign.center,
                   ),
                   Slider(
@@ -153,11 +159,11 @@ class _InputPageState extends State<InputPage> {
                       children: <Widget>[
                         Text(
                           'ВЕС, кг',
-                          style: kBodyTextStyle,
+                          style: kBodyTextStyleGrey,
                         ),
                         Text(
                           weight.toString(),
-                          style: kNumberTextStyle,
+                          style: kNumberTextStyleBlue,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -170,29 +176,25 @@ class _InputPageState extends State<InputPage> {
                               },
                               child: Icon(FontAwesomeIcons.plus),
                               style: TextButton.styleFrom(
-                                primary: Color(0xFFffffff),
-                                backgroundColor: kButtonColour1,
+                                primary: kTextDark,
+                                backgroundColor: kButtonColour,
                                 shape: CircleBorder(),
                                 padding: EdgeInsets.all(13),
                               ),
                             ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            RawMaterialButton(
+                            TextButton(
                               onPressed: () {
                                 setState(() {
                                   weight--;
                                 });
                               },
                               child: Icon(FontAwesomeIcons.minus),
-                              shape: CircleBorder(),
-                              constraints: BoxConstraints.tightFor(
-                                width: 50,
-                                height: 50,
+                              style: TextButton.styleFrom(
+                                primary: kTextDark,
+                                backgroundColor: kButtonColour,
+                                shape: CircleBorder(),
+                                padding: EdgeInsets.all(13),
                               ),
-                              fillColor: kButtonColour1,
-                              padding: EdgeInsets.all(5),
                             ),
                           ],
                         )
@@ -206,47 +208,42 @@ class _InputPageState extends State<InputPage> {
                       children: <Widget>[
                         Text(
                           'ВОЗРАСТ',
-                          style: kBodyTextStyle,
+                          style: kBodyTextStyleGrey,
                         ),
                         Text(
                           age.toString(),
-                          style: kNumberTextStyle,
+                          style: kNumberTextStyleBlue,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            RawMaterialButton(
+                            TextButton(
                               onPressed: () {
                                 setState(() {
                                   age++;
                                 });
                               },
                               child: Icon(FontAwesomeIcons.plus),
-                              shape: CircleBorder(),
-                              constraints: BoxConstraints.tightFor(
-                                width: 50,
-                                height: 50,
+                              style: TextButton.styleFrom(
+                                primary: kTextDark,
+                                backgroundColor: kButtonColour,
+                                shape: CircleBorder(),
+                                padding: EdgeInsets.all(13),
                               ),
-                              fillColor: kButtonColour2,
-                              padding: EdgeInsets.all(5),
                             ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            RawMaterialButton(
+                            TextButton(
                               onPressed: () {
                                 setState(() {
                                   age--;
                                 });
                               },
                               child: Icon(FontAwesomeIcons.minus),
-                              shape: CircleBorder(),
-                              constraints: BoxConstraints.tightFor(
-                                width: 50,
-                                height: 50,
+                              style: TextButton.styleFrom(
+                                primary: kTextDark,
+                                backgroundColor: kButtonColour,
+                                shape: CircleBorder(),
+                                padding: EdgeInsets.all(13),
                               ),
-                              fillColor: kButtonColour2,
-                              padding: EdgeInsets.all(5),
                             ),
                           ],
                         )
@@ -290,12 +287,14 @@ class _InputPageState extends State<InputPage> {
 
 class ReusableCard extends StatelessWidget {
   final Color color;
+  final bool border;
   final Widget child;
   final Function onTap;
 
   const ReusableCard({
     Key key,
     this.color = kInactiveCardColour,
+    this.border = false,
     this.child,
     this.onTap,
   }) : super(key: key);
@@ -308,7 +307,14 @@ class ReusableCard extends StatelessWidget {
         child: child,
         margin: EdgeInsets.all(10),
         decoration: BoxDecoration(
-            color: color, borderRadius: BorderRadius.all(Radius.circular(10))),
+            color: color,
+            border: border == true
+                ? Border.all(
+                    color: kBottomContainerColour,
+                    width: 1,
+                  )
+                : Border(),
+            borderRadius: BorderRadius.all(Radius.circular(10))),
       ),
     );
   }

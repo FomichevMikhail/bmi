@@ -12,6 +12,7 @@ class ResultPage extends StatelessWidget {
       backgroundColor: kBG,
       appBar: AppBar(
         backgroundColor: kBG,
+        centerTitle: true,
         title: Text(
           'РЕЗУЛЬТАТЫ РАСЧЕТА',
           style: kBodyTextStyle,
@@ -28,8 +29,8 @@ class ResultPage extends StatelessWidget {
                   height: 150,
                 ),
                 Text(
-                  'ВАШ BMI',
-                  style: kResultTextStyle,
+                  'ВАШ ИНДЕКС МАССЫ ТЕЛА',
+                  style: kBodyTextStyleBlue,
                 ),
                 SizedBox(
                   height: 30,
@@ -47,12 +48,12 @@ class ResultPage extends StatelessWidget {
                   Navigator.pop(context);
                 },
                 child: Container(
-                  height: 70,
+                  height: kBottomContainerHeight,
                   color: kBottomContainerColour,
                   child: Center(
                       child: Text(
                     'ПЕРЕСЧИТАТЬ',
-                    style: kLabelTextStyle,
+                    style: kLabelTextStyleDark,
                   )),
                 ),
               ),

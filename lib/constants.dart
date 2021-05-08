@@ -20,19 +20,25 @@ const kBottomContainerHeight = 80.0;
 const kInactiveCardColour = Color(0xFF242831);
 const kBG = Color(0xFF141519);
 const kBottomContainerColour = Color(0xFFFFC928);
-const kButtonColour1 = Color(0xFFEC190E);
-const kButtonColour2 = Color(0xFFEC190E);
+const kButtonColour = Color(0xFFFFC928);
+const kPictoRed = Color(0xFFEC190E);
 const kTextBlue = Color(0xFF76AEC9);
 const kTextDark = Color(0xFF141519);
 const kTextLight = Color(0xFFFFFFFF);
+const kTextGrey = Color(0xFFE3E3E3);
 
 const kLabelTextStyle = TextStyle(
   fontSize: 20,
   //color: Color(0xFF8D8E98),
 );
 
+const kLabelTextStyleBlue = TextStyle(
+  fontSize: 20,
+  color: kTextBlue,
+);
+
 const kLabelTextStyleDark = TextStyle(
-  fontSize: 16,
+  fontSize: 20,
   fontWeight: FontWeight.bold,
   color: kTextDark,
 );
@@ -40,6 +46,18 @@ const kLabelTextStyleDark = TextStyle(
 const kNumberTextStyle = TextStyle(
   fontSize: 35,
   fontWeight: FontWeight.w900,
+);
+
+const kNumberTextStyleBlue = TextStyle(
+  fontSize: 35,
+  fontWeight: FontWeight.w900,
+  color: kTextBlue,
+);
+
+const kNumberTextStyleGrey = TextStyle(
+  fontSize: 35,
+  fontWeight: FontWeight.w900,
+  color: kTextBlue,
 );
 
 const kLargeButtonTextStyle = TextStyle(
@@ -53,7 +71,7 @@ const kTitleTextStyle = TextStyle(
 );
 
 const kResultTextStyle = TextStyle(
-  color: Color(0xFFFF4637),
+  color: kPictoRed,
   fontSize: 20,
   fontWeight: FontWeight.bold,
 );
@@ -67,8 +85,26 @@ const kBodyTextStyle = TextStyle(
   fontSize: 20,
 );
 
-const kBodyTextStyleDark = TextStyle(
+const kBodyTextStyleBlue = TextStyle(
   fontSize: 20,
   color: kTextBlue,
+  //fontWeight: FontWeight.bold,
+);
+
+const kBodyTextStyleGrey = TextStyle(
+  fontSize: 20,
+  color: kTextGrey,
+  //fontWeight: FontWeight.bold,
+);
+
+const kBodyTextStyleRed = TextStyle(
+  fontSize: 20,
+  color: kPictoRed,
+  //fontWeight: FontWeight.bold,
+);
+
+const kBodyTextStyleDark = TextStyle(
+  fontSize: 20,
+  color: kTextDark,
   fontWeight: FontWeight.bold,
 );
