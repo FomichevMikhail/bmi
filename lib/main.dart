@@ -311,7 +311,7 @@ class ReusableCard extends StatelessWidget {
             border: border == true
                 ? Border.all(
                     color: kBottomContainerColour,
-                    width: 1,
+                    width: 2,
                   )
                 : Border(),
             borderRadius: BorderRadius.all(Radius.circular(10))),
